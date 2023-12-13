@@ -194,3 +194,67 @@ font-size: 15px;
 font-weight: 400;
 line-height: 20px;
 }
+
+.mount__box{
+    position: relative;
+    height: 600px;
+    margin-top: 100px;
+}
+
+.mount__img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.mount__content{
+    padding-right: 70px;
+}
+
+.mount__content-title{
+    color: #FFF;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.mount__content-text{
+    color: #C0C0C0;
+font-size: 14px;;
+font-weight: 400;
+line-height: 20px;
+max-width: 300px;
+width: 100%;
+}
+
+.mount__info{
+    display: flex;
+    gap: 15px;
+    padding-right: 50px;
+    justify-content: end;
+}
+
+.mount__item-span{
+    color: #FFF;
+font-size: 12px;
+font-weight: 400;
+line-height: 12px;
+}
+
+.mount__box{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 200px;
+    padding-bottom: 40px;
+}
+
+.mount{
+    
+}
