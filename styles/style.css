@@ -159,6 +159,7 @@ top: 0;
 width: 100%;
 height: 100%;
 z-index: -1;
+object-fit: cover;
 }
 
 .wedo__item-title{
@@ -177,7 +178,7 @@ font-weight: 400;
 line-height: 20px;
 }
 
-.wedo__item-btn{
+.btn{
     display: flex;
     gap: 5px;
     align-items: center;
@@ -188,20 +189,17 @@ width: 143px;
 height: 42px;
 }
 
-.wedo__item-btn-title{
+.btn__title{
     color: #000;
 font-size: 15px;
 font-weight: 400;
 line-height: 20px;
 }
 
-.mount__box{
-    position: relative;
-    height: 600px;
-    margin-top: 100px;
-}
 
-.mount__img{
+.mount__img,
+.monstera__img,
+.mount__img2{
     position: absolute;
     left: 0;
     top: 0;
@@ -210,11 +208,15 @@ line-height: 20px;
     z-index: -1;
 }
 
-.mount__content{
+.mount__content,
+.monstera__content,
+.mount__content2{
     padding-right: 70px;
 }
 
-.mount__content-title{
+.mount__content-title,
+.monstera__content-title,
+.mount__content-title2{
     color: #FFF;
 font-size: 14px;
 font-weight: 400;
@@ -223,7 +225,9 @@ letter-spacing: 2px;
 text-transform: uppercase;
 }
 
-.mount__content-text{
+.mount__content-text,
+.monstera__content-text,
+.mount__content-text2{
     color: #C0C0C0;
 font-size: 14px;;
 font-weight: 400;
@@ -232,29 +236,277 @@ max-width: 300px;
 width: 100%;
 }
 
-.mount__info{
+.mount__info,
+.monstera__info,
+.mount__info2{
     display: flex;
     gap: 15px;
     padding-right: 50px;
     justify-content: end;
 }
 
-.mount__item-span{
+.span{
     color: #FFF;
 font-size: 12px;
 font-weight: 400;
 line-height: 12px;
 }
 
-.mount__box{
+.mount__box,
+.monstera__box,
+.mount__box2{
     display: flex;
     flex-direction: column;
     align-items: end;
     justify-content: end;
     gap: 200px;
     padding-bottom: 40px;
+    position: relative;
+    height: 600px;
 }
 
-.mount{
+.mount__box,
+.mount__box2{
+    margin-top: 100px;
+}
+
+.weuse__box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(570px, auto);
+}
+
+.weuse__right{
+    background: url(../images/weuse.jpg) no-repeat center /cover;
+}
+
+.weuse__left-cage{
+    color: #C0C0C0;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+letter-spacing: 2px;
+text-transform: uppercase;
+}
+
+.weuse__left-title{
+    color: #FFF;
+font-size: 28px;
+font-weight: 400;
+line-height: 32px;
+}
+
+.weuse__left-text{
+    color: #FFF;
+font-size: 14px;
+font-weight: 400;
+line-height: 20px;
+max-width: 514px;
+width: 100%;
+}
+
+.weuse__left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 100px;
+}
+
+.weuse__info{
+    display: flex;
+    gap: 16px;
+    justify-content: end;
     
+}
+
+.weuse__right{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding-bottom: 40px;
+    padding-right: 50px;
+}
+
+.clients__info-title{
+    color: #FFF;
+text-align: center;
+font-size: 40px;
+font-weight: 400;
+line-height: 42px;
+margin-top: 113px;
+}
+
+.clients__info-text{
+    color: #C0C0C0;
+text-align: center;
+font-size: 24px;
+font-weight: 400;
+line-height: 30px;
+margin-top: 15px;
+}
+
+.clients__companies{
+    display: flex;
+    gap: 109px;
+    justify-content: space-between;
+    padding: 40px 0;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.help__title{
+    color: #FFF;
+text-align: center;
+font-size: 40px;
+font-weight: 400;
+line-height: 42px;
+max-width: 571px;
+width: 100%;
+}
+
+.help__text{
+    color: #C0C0C0;
+text-align: center;
+font-size: 24px;
+font-weight: 400;
+line-height: 30px;
+}
+
+.help{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 0;
+}
+
+@media(max-width: 1150px){
+    .content__info{
+        justify-content: center;
+        padding: 0;
+    }
+
+    .content{
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .clients__companies{
+        justify-content: center;
+        gap: 50px;        
+    }
+
+    .wedo__info-title{
+        margin-top: 50px;
+    }
+
+    .weuse__left{
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .weuse__left-text{
+        text-align: center;
+    }
+}
+
+
+
+
+@media (max-width: 860px){
+    .header__nav{
+        flex-direction: column;
+    }
+
+    .wedo__item{
+        grid-column: span 2;
+        justify-content: center;
+        align-items: center;
+            
+    }
+
+    .wedo__products{
+        grid-auto-rows: 400px; 
+    }
+
+    .weuse__left,
+    .weuse__right{
+        grid-column: span 2;
+    }
+
+    .weuse__box{
+        grid-auto-rows: 400px;
+    }
+
+    .mount__box,
+    .monstera__box,
+    .mount__box2{
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        height: 300px;
+        gap: 40px;
+    }
+
+    .mount__content-text,
+    .monstera__content-text,
+    .mount__content-text2{
+        text-align: center;
+    }
+
+    .mount__content-title,
+    .monstera__content-title,
+    .mount__content-title2{
+        text-align: center;
+    } 
+
+    .mount__content,
+    .monstera__content,
+    .mount__content2{
+        padding: 0;
+    }
+
+    .help__title{
+        font-size: 28px;
+    }
+
+    .help{
+        padding: 50px 0;
+    }
+
+    .mount__info,
+    .monstera__info,
+    .mount__info2{
+        padding-right: 0;
+    } 
+}
+
+@media(max-width: 520px){
+.header__list{
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+.clients__info-title{
+    margin-top: 50px;
+}
+
+.mount__box,
+.mount__box2{
+    margin-top: 50px;
+}
+
+.content__box-title{
+    font-size: 30px;
+    text-align: center;
+}
+
+.content__box-text{
+    margin-top: 0;
+}
+
 }
